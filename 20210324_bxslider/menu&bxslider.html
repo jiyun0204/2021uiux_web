@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script>
+        $(document).ready(function(){
+            var mySlider = $('.slider').bxSlider({
+                auto:true,
+                pager:false,
+                controls:false
+            });
+            $(".nextBtn").click(function(){
+                mySlider.goToNextSlide();
+            });
+            $(".prevBtn").click(function(){
+                mySlider.goToPrevSlide();
+            });
+            
+        });
+    </script>
+    <style>
+        
+        .container{width: 1000px;margin: 0 auto;position: relative;}
+        .container li img{width: 100%;display: block;}
+        
+        
+        
+        .bx-wrapper {
+            -moz-box-shadow: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border: 0 none;
+            background: #fff;
+            margin-bottom:0;
+        }
+
+        .bx-wrapper .bx-pager{
+            bottom: 30px;
+        }
+        .bx-wrapper .bx-pager.bx-default-pager a.active{
+            background:red;
+        }
+
+        .nextBtn,.prevBtn{
+            position: absolute;top:50%;transform: translateY(-50%);
+            cursor: pointer
+        }
+        .nextBtn{right: 0;}
+        .prevBtn{left: 0;}
+        
+        #header{background:yellow;}
+        #header .container li{float: left;width:calc(1000px / 6)};
+        #header .container li{background:#5b6df8;}
+       
+        #header .container li a{
+            display: block;line-height:40px;text-align: center;
+            font-weight:bold
+        }
+        
+        .gnb{width: 1500px;margin: 0 auto; height:40px;position: relative;z-index: 1}
+       
+        .gnb > ul > li {float: left;width:20%; background:skyblue;}
+        .gnb > ul > li:hover {background:#57b288;}
+        .gnb > ul > li > a{display: block;line-height:40px;text-align: center;}
+        .gnb > ul > li:hover a {color:azure;}
+        .gnb > ul > li:hover .submenu{display: block;}*/
+/*        .gnb > ul:hover .submenu{display: block;}*/
+       
+        
+        .gnb .submenu {display: none; position:absolute;}
+        .gnb .submenu li:hover {background:#bec6ff;}
+        .gnb .submenu li a{display: block;line-height:30px;text-align: center;}
+        
+        
+        #section1st li{float: left;width:calc((1000px - 60px) / 4  );height: 235px;position: relative; cursor:pointer; overflow:hidden; border-radius:10% }
+        
+        #section1st li + li{margin-left:20px;}
+ 
+        #section1st h2,
+        #section1st p{text-align: center;}
+        #section1st h2:after{
+            content:"";display: block;
+            width: 100px;height: 1px;background: #000;
+            margin: 10px auto;
+        }
+        #section1st p{margin-bottom:20px;}
+        #section1st .overlay {background:rgba(133, 211, 172, 0.8);
+            height:100%; width: 100%;
+            position: absolute;
+            transition:0.3s;
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            text-align: center;
+            top:-100%;
+            left:0;
+                    }
+        
+        #section1st .overlay1 {background:rgba(255, 200, 249, 0.8);
+            height: 100%; width: 100%;
+            position: absolute;
+            transition:0.5s;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            top: 100%;
+            left: 0
+        }
+        
+        #section1st .overlay2 {background:rgba(202, 212, 147, 0.8);
+            height: 100%; width: 100%;
+            position: absolute;
+            transition:0.5s;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            top: 0;
+            left:100%
+        }
+        
+        #section1st .overlay3 {background:rgba(168, 192, 247, 0.8);
+            height: 100%; width: 100%;
+            position: absolute;
+            transition:0.5s;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            top: 0;
+            left:-100%
+        }
+        
+        
+        
+        #section1st li:hover .overlay{ top: 0; left:0}
+         #section1st li:hover .overlay1{ top: 0; left:0}
+         #section1st li:hover .overlay2{ top: 0; left:0}
+         #section1st li:hover .overlay3{ top: 0; left:0}
+        
+        
+        
+        
+        #section2st li{float: left;width:calc((1000px - 60px) / 4  )}
+        #section2st li + li{margin-left:20px;}
+/*
+        #section li{margin-left: 20px;}
+        #section li:first-child{margin-left:0;}
+*/    
+        #section2st h2,
+        #section2st p{text-align: center;}
+        #section2st h2:after{
+            content:"";display: block;
+            width: 100px;height: 1px;background: #000;
+            margin: 10px auto;
+        }
+        #section2st p{margin-bottom:20px;}
+        
+        
+        
+        .mb30{margin-bottom:30px !important;}
+        .pt30{padding-top: 30px !important;}
+        .pb30{padding-bottom: 30px !important;}
+        .gray{background: #eee;}
+        
+    </style>
+</head>
+<body>
+   <header id="header">
+       <div class="container">
+           <nav class="gnb">
+            <ul class="clearfix">
+                <li c><a href="#">MENU1</a>
+                    <ul class="submenu">
+                        <li><a href="#">smenu1_1</a></li>
+                        <li><a href="#">smenu1_2</a></li>
+                        <li><a href="#">smenu1_3</a></li>
+                        <li><a href="#">smenu1_4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">MENU2</a>
+                    <ul class="submenu">
+                        <li><a href="#">smenu2_1</a></li>
+                        <li><a href="#">smenu2_2</a></li>
+                        <li><a href="#">smenu2_3</a></li>
+                        <li><a href="#">smenu2_4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">MENU3</a>
+                    <ul class="submenu">
+                        <li><a href="#">smenu3_1</a></li>
+                        <li><a href="#">smenu3_2</a></li>
+                        <li><a href="#">smenu3_3</a></li>
+                        <li><a href="#">smenu3_4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">MENU4</a>
+                    <ul class="submenu">
+                        <li><a href="#">smenu4_1</a></li>
+                        <li><a href="#">smenu4_2</a></li>
+                        <li><a href="#">smenu4_3</a></li>
+                        <li><a href="#">smenu4_4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">MENU5</a>
+                    <ul class="submenu">
+                        <li><a href="#">smenu5_1</a></li>
+                        <li><a href="#">smenu5_2</a></li>
+                        <li><a href="#">smenu5_3</a></li>
+                        <li><a href="#">smenu5_4</a></li>
+                    </ul>
+                </li>
+                 <li><a href="#">MENU6</a>
+                    <ul class="submenu">
+                        <li><a href="#">smenu6_1</a></li>
+                        <li><a href="#">smenu6_2</a></li>
+                        <li><a href="#">smenu6_3</a></li>
+                        <li><a href="#">smenu6_4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+       </div>
+   </header>
+    <div class="container mb30">
+        <ul class="slider">
+            <li><img src="images/pc01.jpg" alt=""></li>
+            <li><img src="images/pc02.jpg" alt=""></li>
+            <li><img src="images/pc03.jpg" alt=""></li>
+        </ul>
+    </div>
+    
+</body>
+</html>
