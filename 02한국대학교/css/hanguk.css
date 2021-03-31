@@ -54,8 +54,8 @@
 
 #contents .container>ul>li{float:left; width:24%;height: 225px;}
 /*짝수만 */
-#contents .container>ul>li:nth-child(2n){background-image:url(../images/cgrilbook.jpg);}
-#contents .container>ul>li:nth-child(1){width: 75%;height: 450px;background-image:url(../images/handtb.jpg); background-repeat:no-repeat; float:right;}
+#contents .container>ul>li:nth-child(2n){background-image:url(../images/cgrilbook.jpg) ;}
+#contents .container>ul>li:nth-child(1){width: 75%;height: 450px;background-image:url(../images/handtb.jpg); background-repeat:no-repeat; display: block;}
 #contents .container>ul>li:nth-child(2){height: 450px; font-size:14px; }
 #contents .container>ul>li:nth-child(3){}
 #contents .container>ul>li:nth-child(4){}
