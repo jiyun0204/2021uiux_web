@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>position</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+ 
+        div {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        box1 {
+            background: #e8c78a;
+            position: relative;
+            z-index: 2
+        }
+
+        box2 {
+            background: #87c6b7;
+            position: absolute;
+            left: 60px;
+            z-index: 1;
+            top: 0
+        }
+
+        box3 {
+            background: #a28ff0;
+            position: absolute;
+            top: 0
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+    
+    <style>
+        .boxWrap{width: 100px; height: 100px; background:#0a6c61;}
+        .boxWrap a{display:block; background: #485a7c; display: block; }
+        .boxWrap div.box10{position: absolute; bottom: 0;background: #7b6868; width: 100%;}
+    </style>
+    
+    <div class="boxWrap">
+       <a href="#">test</a>
+       <div class="box10">view</div>
+        
+    </div>
+</body></html>
