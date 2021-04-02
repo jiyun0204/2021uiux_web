@@ -1,0 +1,77 @@
+@charset 'utf-8';   
+
+
+
+/*header*/
+.utilwrap{ background:#0044af; height:40px;  }
+.yh { width:1200px; margin: 0 auto;}
+.menu {float:left;}
+.menu li { float:left; width:120px; line-height:40px; text-align:center; background: #00163b; margin-right: 4px; }
+.menu li a { font-weight: bold; color:#fff; font-size:12pt;display:block; }
+.menu li a:hover {  color:#0044af;  }
+.menu li:hover { background:#fff;}
+
+.map { float:right; }
+.map img { padding:5px; margin:auto;  }
+.map li{ float:left; line-height: 40px; margin-left: 20px; }
+.map li a{ font-weight: bold; color:#fff; font-size: 12pt;    }
+
+
+.utilwrap2{background: #fff;padding: 20px 0;}
+.utilwrap2 { display:block;}
+.yh img { float:left; cursor:pointer; padding-left:20px; margin-right:20px; }
+
+ 
+.menu1 {float:right;  }
+.menu1 ul{float:left; line-height:80px;  }
+.menu1 li {float:left; line-height:80px; margin-left:20px;   }
+.menu1 li:last-child{margin-left:0; }
+.menu1 li a{ font-weight: normal; }
+.menu1 img { float:left; line-height:40px; margin-right: auto; }
+
+
+
+/*contents*/
+#contents {
+    height: 1300px;
+    background-image:url(../images/bg_dot.gif),url(../images/main_bg.jpg);
+    background-repeat:repeat,no-repeat;
+    background-position:center;
+    background-size:auto,cover;
+    padding:100px 0;
+    
+     }
+
+
+
+#contents li {display: block; line-height:1px; }
+ 
+
+#section {display: block;}
+
+
+
+#contents .titleWrap{ width: 1200px;height: 260px; margin: 0 auto; margin-bottom:50px;}
+
+#contents .container { width:1200px; margin: 0 auto; background:#fff; }
+
+#contents .container>ul>li{ float:left; width:25%; height: 225px; }
+/*짝수만 */
+#contents .container>ul>li:nth-child(2n){background:;}
+#contents .container>ul>li:nth-child(1){width: 75%;height: 450px;background:gray; background-image:url(../images/cgrilbook.jpg); }
+#contents .container>ul>li:nth-child(2){ background-image:url(../images/handtb.jpg); height:450px;}
+#contents .container>ul>li:nth-child(3){ }
+#contents .container>ul>li:nth-child(4){}
+#contents .container>ul>li:nth-child(5){}
+/*6번캠퍼스투어*/
+#contents .container>ul>li:nth-child(6){background-image:url(../images/unpic.jpg); width:300px;  height:200px; }
+#contents .container>ul>li:nth-child(7){ background-image: url(../images/ccmovie.jpg);  }
+#contents .container>ul>li:nth-child(8){.width: 75%; padding-top:0;}
+
+
+
+/*푸터영역  */
+.footer { background:#fff;}
+.footer 
+
+
