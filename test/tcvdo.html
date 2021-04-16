@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>fl menu</title>
+    <style>
+/*        reset*/
+        *{margin:0; padding:0;}
+        a:link,a:visited{color:#000;
+        text-decoration:none;}
+        li{list-style:none;}
+        .clearfix:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        /*        nav*/
+        nav.nav {
+            width: 1000px;
+/*            background-color: darkolivegreen;*/
+            margin: 0 auto;
+        }
+
+        nav.nav>ul {}
+
+        nav.nav>ul>li {
+            float: left;
+            width: 200px;
+            height: 40px;}
+
+ 
+        
+/*
+         nav.nav>ul>li {
+            float: left;
+            width: 200px;
+             height: 40px;
+            background-color:burlywood;
+            bgc:sb
+        }
+        nav.nav>ul>li:hover{background-color:cornsilk; }
+        nav.nav>ul>li:hover a{color:darksalmon;}
+*/
+        
+        
+        
+        nav.nav>ul>li>a{
+            display: block; 
+            height: 40px;
+            text-align: center;
+             line-height: 40px;
+            background-color:thistle;
+        }
+        nav.nav>ul>li>a:hover{background-color: palevioletred; color:aquamarine;}
+        
+        
+/*
+        nav.nav>ul{}
+        nav.nav>ul:after{content:""; display:block; clear:both;}
+        nav.nav>ul>li{float: left;}
+        nav.nav>ul>li>a{}
+*/
+        
+    </style>
+</head>
+
+<body>
+    <nav class="nav">
+
+        <ul class="clearfix">
+            <!--          before-->
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu4</a></li>
+            <li><a href="#">menu5</a></li>
+            <!--           after-->
+        </ul>
+    </nav>
+</body>
+</html>

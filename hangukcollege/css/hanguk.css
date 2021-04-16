@@ -2,7 +2,7 @@
 
 
 
-/*header*/
+/*header*/ 
 .utilwrap{ background:#0044af; height:40px;  }
 .yh { width:1200px; margin: 0 auto;}
 .menu {float:left;}
@@ -33,7 +33,7 @@
 
 /*contents*/
 #contents {
-    height: 1300px;
+    height: 1300px; 
     background-image:url(../images/bg_dot.gif),url(../images/main_bg.jpg);
     background-repeat:repeat,no-repeat;
     background-position:center;
@@ -41,6 +41,11 @@
     padding:100px 0;
     
      }
+.titleWrap .imgicon{width:1000px; }
+
+.imgicon li {float: left; color:aqua; 
+}
+
 
 
 
@@ -48,7 +53,7 @@
  
 
 #section {display: block;}
-
+ 
 
 
 #contents .titleWrap{ width: 1200px;height: 260px; margin: 0 auto; margin-bottom:50px;}

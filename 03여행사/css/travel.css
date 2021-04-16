@@ -1,0 +1,65 @@
+@charset "UTF-8";
+ 
+body{min-width:1200px;}
+
+
+/*header*/
+.utilWrap {position:relative}
+
+
+    .wrap{
+      position: absolute;
+      left: 50%;top: 50%;
+      transform:translate(-50%,-50%);
+       z-index: 1
+      }
+    .wrap label{
+      display: block;width: 60px;height: 20px;
+      background:skyblue;background-image: url(image/Group 1.png);
+      text-indent:-9999px;position: absolute;top:15px;left:20px;
+      z-index:1
+    }
+    .wrap .inp-search{
+      width:400px;height: 50px;
+      border-radius:25px;text-indent:90px;
+      position: relative;
+    }
+    .wrap .inp-search:focus,.wrap .btn-search:focus{outline:none}
+    .wrap .btn-search{
+      width: 40px;height: 40px;
+      border: 2px solid #ddd;
+      background-image: url(images/search.jpg);
+      background-color: #fff;
+      background-repeat: no-repeat;
+      background-position: center;
+      text-indent:-9999px;
+      border-radius:50%;
+      position: absolute;right:6px;top:50%;transform:translateY(-50%);
+      cursor:pointer
+    }
+
+    .wrap .img01{
+      position: absolute;right: -100px;top:-200px;
+      animation-name:bal01;
+      animation-duration: 3s;
+      animation-iteration-count:infinite;
+      animation-direction:alternate;
+    }
+
+    @keyframes bal01 {
+
+      to{top:-250px}
+    } 
+      
+    
+      .img00{
+          position: absolute;
+          left:-100px;
+          bottom:-100%;   
+          animation-name:air;
+          animation-duration:3s;
+          animation-fill-mode:forwards;
+              }  
+      @keyframes air {
+          to{left: 100%; bottom: 100%;}  
+      }

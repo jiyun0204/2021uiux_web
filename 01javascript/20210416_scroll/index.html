@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    
+    <style>
+        .body{height:  4000px;}    
+        
+        
+        
+    .box {width: 100px; height: 100px; background:#81e098; position: absolute; transition:0.3s; left:0}
+        
+
+        .view{position: fixed; right: 0; bottom: 0;
+        padding:20px; background:#5f73a2;}    
+        
+        .boxview{background:#c3b9ff; left:500px;}
+        
+        .box.box1   {top: 700px;}
+        .box.box2   {top: 1400px;}
+        .box.box3   {top: 2000px;}
+        
+        
+    </style>
+    
+</head>
+<body>
+    <div class="box box1 ">box1</div>
+    <div class="box box2">box2</div>
+    <div class="box box3">box3</div>
+    <div class="view">
+        <p>scroll : <span class="scrollView">0</span></p>
+        <script>
+//            스크롤 -자료전송해서 씀
+            const scrollY = document.querySelector(".scrollView");
+            //.스크롤뷰에 첫번째 돔 선택하여 스크롤와이변수에 저장
+            const boxPos = document.querySelectorAll(".box");
+            //.예제.....를 갖다가 보셔야합니다...스크롤얼......은요...음..클래스나 아이디 하나만 갖다가 적용이된다고하네요....
+         window.addEventListener("scroll",function(){
+             console.log(window.pageYOffset);
+             const scrollYPosition = window.pageYOffset;
+             scrollY.innerHTML = scrollYPosition;
+             
+//             if(700<scrollYPosition){
+//               boxPos[0].classList.add("boxview");  
+//                 
+//             }else{
+//                 boxPos[0].classList.remove("boxview");
+//             }
+             
+            for(let i=0;i<boxPos.length;i++){
+                if(boxPos[i].offsetTop<scrollYPosition + window.innerHeight/2){
+                    boxPos[i].classList.add("boxview");
+//                    클래스를 삽입한다.
+                }else{
+                    boxPos[i].classList.remove("boxview");
+//                    클래스를 제거한다
+                }
+            }
+             
+             
+             
+         });
+        </script>
+    </div>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
