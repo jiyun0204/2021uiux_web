@@ -52,12 +52,13 @@
             
         
             
-            
+            function view(){
             //.예제.....를 갖다가 보셔야합니다...스크롤얼......은요...음..클래스나 아이디 하나만 갖다가 적용이된다고하네요....박스의갯수
          window.addEventListener("scroll",function(){
 //             이벤트이름:스콜-실행문 리스너 필요 지역변수전역변수
 //             console.log(window.pageYOffset);
-              
+           const winHeight = window.innerHeight/2;
+             winH.innerHTML = winHeight;   
              
              const scrollYPosition = window.pageYOffset;
              scrollY.innerHTML = scrollYPosition;
@@ -69,10 +70,10 @@
 //                 boxPos[0].classList.remove("boxview");
 //             }
              
-            for(let i=0;i<boxPos.length;i++){
+         for(let i=0;i<boxPos.length;i++){
 //                    왼-고정 오-변경
-                if(boxPos[i].offsetTop<scrollYPosition + winHeight){
-                    boxPos[i].classList.add("boxview");
+             if(boxPos[i].offsetTop<scrollYPosition + winHeight){
+                  boxPos[i].classList.add("boxview");
 //                    클래스를 삽입한다.-조건중요
                 }else{
                     boxPos[i].classList.remove("boxview");
@@ -83,15 +84,11 @@
              
              
          });
-            
+            }
 //        window.addEventListener("resize",function(){});
         window.addEventListener("resize",view);
-             
-            function view(){
-                const winHeight = window.innerHeight/2;
-             winH.innerHTML = winHeight;
-            }
             
+
             view();
             
         </script>

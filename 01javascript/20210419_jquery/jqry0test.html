@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <style>
+        ul.tab{width: 1000px; margin: 0 auto;}
+        ul.tab li{float: left; width:calc( 1000px / 5 ); text-align: center; line-height:40px;}
+        ul.tab li:first-child{background:pink;}
+    </style>
+</head>
+<body>
+    <ul class="tab clearfix">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+    </ul>
+    <div class="boxWrap">
+        <div>1.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, necessitatibus. is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</div>
+        <div>2.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, necessitatibus. is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</div>
+        <div>3.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, necessitatibus. is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</div>
+        <div>4.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, necessitatibus. is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</div>
+        <div>5.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, necessitatibus. is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</div>
+<!--         스크립트 위에 올려써도 ㄱㅊ-->
+        <script src="../../js/jquery-3.1.1.min.js"></script>
+        <script>
+//            스탈싵 넣어도 ㄱㅊ
+//        $(".boxWrap div").hide().eq(0).show();
+//            $(".tab>li").eq(0).css("background","pink");
+            
+            $(".tab>li").click(function(){
+                $(".tab>li").css("background","initial")
+                $(this).css("background","pink");
+                let t = $(this).index();
+                $(".boxWrap div").hide().eq(t).show();
+            });
+        </script>
+    </div>
+</body>
+</html>

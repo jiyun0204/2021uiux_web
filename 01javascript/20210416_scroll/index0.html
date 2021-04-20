@@ -31,26 +31,17 @@
     <p>scroll : <span class="scrollView">0</span></p>
     
     <script>
-        const scrollY = document.querySelector(".scrollView");
-        
-        
+       const scrollY = document.querySelector(".scrollView");
         const boxPos = document.querySelectorAll(".box");
-        
-        window.addEventListener("scroll",function(){
-            console.log(window.pageYOffset);
-            const scrollYPosition = window.pageYOffset;
-            scrollY.innerHTML = scrollYPosition;
+//   스크롤값에의해변경
+        window.addEventListener ("scroll",function(){
+            console.log (window.pageYOffset);
             
-            for(let i=0;i<boxPos.length;i++){
-                if(boxPos[i].offsetTop<scrollYPosition + window.innerHeight/2) {
-                    boxPos[i].classList.add("boxview");
-                }else{
-                    boxPos[i].classList.remove("boxview");
-                
-                }
-            }
+            const 
             
-        });
+            
+            
+        }
         
         
         </script>

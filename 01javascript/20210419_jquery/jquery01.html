@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>jquery</title>
+    <script src="../../js/jquery-3.1.1.min.js"></script>
+    
+     <script>
+//       body에있는ready fc으로....  
+         $(document).ready(function(){
+             console.log( $("p").eq(1).css("background") ); 
+       $("p").eq(2).css("color","green");
+       document.getElementsByTagName("p")[3].style.color="skyblue"; 
+         });
+         
+         
+   
+       
+    </script>  
+      
+
+          
+</head>
+<body>
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam debitis minus nisi, aliquid dolores expedita harum voluptate odio. Iusto ipsam natus corporis quam totam doloremque nihil excepturi officia placeat molestiae.</p>
+   <p>Voluptate ducimus corporis nam cum harum deserunt impedit in dignissimos, aut recusandae tenetur mollitia reprehenderit fugit corrupti dolorem temporibus architecto nostrum voluptatibus aliquam et unde inventore voluptas deleniti? Nobis, reprehenderit.</p>
+   <p>Necessitatibus voluptas pariatur, enim cupiditate ex natus iusto repudiandae voluptatem in, illo ut fugit mollitia nesciunt corrupti maiores doloremque, possimus. Quaerat iste molestias, ullam omnis est obcaecati nemo ipsam in!</p>
+   <p>Rerum, esse, quos. Officia explicabo quae vel officiis, accusantium corporis libero doloremque itaque quidem earum ut pariatur repudiandae, quia assumenda, veniam repellendus maiores cumque neque ad debitis dolor facere! Corrupti.</p>
+   <p>Soluta velit earum natus praesentium quidem deleniti, sed asperiores harum est voluptatibus reiciendis facere tempore, aut, consequatur labore excepturi? Recusandae error pariatur reiciendis velit iure facilis iste repellat maxime ab.</p>
+ 
+    
+    
+<ul class="tab">
+    <li>menu1</li>
+    <li>menu2</li>
+    <li>menu3</li>
+    <li>menu4</li>
+    <li>menu5</li>
+</ul>  
+   <div class="boxWrap">
+       <div class="box1">1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, ipsam.</div>
+       <div class="box2">2. Quasi, reprehenderit, dolorem. Suscipit eaque in quos assumenda provident unde?</div>
+       <div class="box3">3. Ullam sequi, eveniet. Harum provident nulla consectetur unde quos delectus!</div>
+       <div class="box4">4. Dignissimos dicta unde enim deserunt necessitatibus eius ipsa, consequuntur sunt.</div>
+       <div class="box5">5. Numquam unde, eius reiciendis placeat deleniti beatae dolorum voluptate odio.</div>
+   </div>
+<script>
+    
+//  $(".tab>li").on("click",function(){})
+//    하이드 논블럭
+//$(".boxWrap>div").hide(); 
+//    $(".boxWrap>div").eq(0).show();
+//    한줄로만들기
+    $(".boxWrap>div").hide().eq(0).show();
+    
+ $(".tab>li").click(function(){
+        //    이벤트기본 -li 아무거나눌러도 첫번째만  pink,,
+//      $(".tab>li").eq(0).css("background","pink");  
+        $(".tab>li").css("background","yellow");
+        $(this).css("background","orange");
+     console.log($(this).index());
+     
+     $(".boxWrap>div").hide();
+//     클릭할때마다 보임 
+     $(".boxWrap>div").eq($(this).index()).show();;
+//     +show -> fadein
+     
+    });
+    
+//    $this,index외워...
+    
+//    메뉴의모양은스타일시트_선택
+//    스크립트->행동
+//    선택자(가중요하대요...)를잡아->실행을시켜...제이쿼리장점
+</script>
+    
+    
+    
+    
+    
+</body>
+</html>

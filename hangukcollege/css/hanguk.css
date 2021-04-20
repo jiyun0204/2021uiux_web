@@ -1,7 +1,7 @@
 @charset 'utf-8';   
 
 
-
+ 
 /*header*/ 
 .utilwrap{ background:#0044af; height:40px;  }
 .yh { width:1200px; margin: 0 auto;}
@@ -31,8 +31,8 @@
 
 
 
-/*contents*/
-#contents {
+/*visual*/
+#visualWrap {
     height: 1300px; 
     background-image:url(../images/bg_dot.gif),url(../images/main_bg.jpg);
     background-repeat:repeat,no-repeat;
@@ -41,20 +41,6 @@
     padding:100px 0;
     
      }
-.titleWrap .imgicon{width:1000px; }
-
-.imgicon li {float: left; color:aqua; 
-}
-
-
-
-
-#contents li {display: block; line-height:1px; }
- 
-
-#section {display: block;}
- 
-
 
 #contents .titleWrap{ width: 1200px;height: 260px; margin: 0 auto; margin-bottom:50px;}
 
@@ -65,7 +51,7 @@
 #contents .container>ul>li:nth-child(2n){background:;}
 #contents .container>ul>li:nth-child(1){width: 75%;height: 450px;background:gray; background-image:url(../images/cgrilbook.jpg); }
 #contents .container>ul>li:nth-child(2){ background-image:url(../images/handtb.jpg); height:450px;}
-#contents .container>ul>li:nth-child(3){ }
+#contents .container>ul>li:nth-child(3){}
 #contents .container>ul>li:nth-child(4){}
 #contents .container>ul>li:nth-child(5){}
 /*6번캠퍼스투어*/
@@ -77,6 +63,37 @@
 
 /*푸터영역  */
 .footer { background:#fff;}
-.footer 
+.footerWrap {  }  
+.footer li {}
+.footer li
 
+
+/*====테스트*/
+/*contents*/
+/*
+#contents {
+    height: 1300px;
+    background-image:url(../images/bg_dot.gif),url(../images/main_bg.jpg);
+    background-repeat:repeat,no-repeat;
+    background-position:center;
+    background-size:auto,cover;
+    padding:100px 0;
+    
+     }
+#contents .titleWrap{width: 1200px;height: 260px;background:violet;margin: 0 auto; margin-bottom: 50px;}
+
+#contents .container {width: 1200px; margin: 0 auto; background:#fff;}
+
+#contents .container>ul>li{float:left; width: 24%;height: 225px;}
+짝수만 
+#contents .container>ul>li:nth-child(2n){background: pink;}
+#contents .container>ul>li:nth-child(1){width: 75%;height: 450px;background:gray;}
+#contents .container>ul>li:nth-child(2){height: 450px;}
+#contents .container>ul>li:nth-child(3){}
+#contents .container>ul>li:nth-child(4){}
+#contents .container>ul>li:nth-child(5){}
+#contents .container>ul>li:nth-child(6){background: skyblue;}
+#contents .container>ul>li:nth-child(7){}
+#contents .container>ul>li:nth-child(8){width: 75%;}
+*/
 
