@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -11,7 +11,7 @@
  
 </head>
 
-<body onmousemove="where(event)">
+<!--<body onmousemove="where(event)">-->
  <script>
     function where(e){
       console.log("x값:"+e.clientX+", y값" + e.clientY)    
@@ -60,14 +60,26 @@
          }
          
 //         체크/보류하기 브라우저상태에따라...
-         function wheel(event, obj){
-            console.log(e.wheelDelta)
+         
+         function wheel(e, obj){
+    //    console.log(e.wheelDelta);
+             let width = 0;
+             if(e.wheelDelta < 0){
+                 wudth--;
+                 if(width<0) { width = 0; }
+          }else{
+              width++;
+          }
+             console.log(width)
+             obj.style.borderStyle = "solid";
+             obj.style.borderWidth = width + "px";
+//         obj.style.borderWidth = width + `${width} "px"`;
+             
          }
          
          
     </script>
-     
-     
+      
       
 </body>
 

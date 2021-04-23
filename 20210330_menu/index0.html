@@ -9,8 +9,8 @@
     <script src="../js/jquery.bxslider.js"></script>
     <style>
         .wrap{background:pink;}
-        .gnb{width: 1200px;margin: 0 auto;height: 40px;}
-        .gnb > ul > li{float: left;width:20%;background:red;}
+        .gnb{width: 1200px;margin: 0 auto;height: 40px;z-index: 1; position: relative;}
+        .gnb > ul > li{float: left;width:20%;background:red;position: relative;}
         .gnb > ul > li:hover{background:#35b08f;}
         .gnb > ul > li > a{display: block;line-height:40px;text-align: center;}
         .gnb > ul > li:hover a{color:white}
@@ -18,11 +18,12 @@
 /*        .gnb > ul:hover .submenu{display: block;}*/
 
         .gnb .submenu{display: none;}
-        .gnb .submenu{margin-bottom: 10px;}
+        .gnb .submenu{margin-bottom: 10px; position: absolute; width: 100%; background:#843;}
         .gnb .submenu li:hover{background: #509dbc;}
-        .gnb .submenu li a{display: block;line-height:30px;text-align: center;}
+        .gnb .submenu li a{width: 100%; display: block;line-height:30px;text-align: center;}
 
-        .visual{overflow: hidden;}
+/*         .visual{overflow: hidden;}*/
+        .visual{height: 400px; background:orange;}
         .visual li img{width: 100%;}
 
     </style>

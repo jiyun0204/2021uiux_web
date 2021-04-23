@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
@@ -9,6 +9,8 @@
         ul.tab{width: 1000px; margin: 0 auto;}
         ul.tab li{float: left; width:calc( 1000px / 5 ); text-align: center; line-height:40px;}
         ul.tab li:first-child{background:pink;}
+        .boxWrap div{padding: 20px; display: none;}
+        .boxWrap div:nth-child(1){display:block;}
     </style>
 </head>
 <body>
@@ -25,8 +27,9 @@
         <div>3.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, necessitatibus. is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</div>
         <div>4.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, necessitatibus. is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</div>
         <div>5.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, necessitatibus. is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</div>
+            </div>
 <!--         스크립트 위에 올려써도 ㄱㅊ-->
-        <script src="../../js/jquery-3.1.1.min.js"></script>
+        <script src="../../js/jquery-3.1.1.min.js"></script> 
         <script>
 //            스탈싵 넣어도 ㄱㅊ
 //        $(".boxWrap div").hide().eq(0).show();
@@ -39,6 +42,6 @@
                 $(".boxWrap div").hide().eq(t).show();
             });
         </script>
-    </div>
+
 </body>
 </html>

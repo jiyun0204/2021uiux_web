@@ -15,7 +15,7 @@
         html,body{height: 100%;}
 /*        디스플레이=플렉스body에자식요소정렬*/
 /*        body{display:flex; justify-content: center; align-items: center; }*/
-        .box{width: 200px; background:#41a293; height: 200px; position: absolute; top: 2000px;}
+        .box{width: 200px; background:#41a293; height: 200px; position: absolute;}
         
         .container {width: 1000px; margin: 0 auto;}
         .container li {float: left; width: calc( (1000px - 50px ) / 6 );background: #c16781; height: 100px; display: flex; justify-content: center; align-items: center; border-radius:10px;}
@@ -28,12 +28,12 @@
     <div style="height:2000px"></div>
     <div class="container">
         <ul>
-            <li class="wow slideInLeft" data-wow-delay="0">test</li>
-            <li class="wow slideInDown" data-wow-delay="0.2s">test</li>
-            <li class="wow slideInRight" data-wow-delay="0.4s">test</li>
-            <li class="wow slideInLeft" data-wow-delay="0.6s">test</li>
-            <li class="wow slideInLeft" data-wow-delay="0.8s">test</li>
-            <li class="wow slideInLeft" data-wow-delay="1s">test</li>
+            <li class="wow bounceInLeft" data-wow-delay="0">test</li>
+            <li class="wow bounceInDown" data-wow-delay="0.2s">test</li>
+            <li class="wow bounceInRight" data-wow-delay="0.4s">test</li>
+            <li class="wow bounceInLeft" data-wow-delay="0.6s">test</li>
+            <li class="wow bounceInLeft" data-wow-delay="0.8s">test</li>
+            <li class="wow bounceInLeft" data-wow-delay="1s">test</li>
         </ul>
     </div>
     <div style="height:2000px"></div>
@@ -56,5 +56,8 @@
         </ul>
     </div>
     <div style="height:2000px"></div>
+    
+    
+    
 </body>
 </html>
