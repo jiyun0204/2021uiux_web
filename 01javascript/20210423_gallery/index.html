@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
+<head>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <title></title>
+ <title>glly</title>
     <link rel="stylesheet" href="../../css/reset.css">
     <script src="../../js/jquery-3.1.1.min.js"></script>
     <script>
@@ -14,21 +14,21 @@
             console.log(t);
              $("#image p").hide().eq(t).show();
         });
-        
+      
         let current = 0;
 //        현재의위치값
         
         $(".right").click(function(){
 //          current = current + 1;
             current++
-            if(current == 3){current=2}
+            if(current == 3){current=2;}
             console.log(current);  
             imgMove();
         });
-        $(".left").click(function(){
+        $(".left").click(function(){ 
 //            current = current - 1;
             current--;
-            console.log(current);
+//            console.log(current);
             if(current == -1){current = 0}
             console.log(current);
             imgMove();
@@ -37,10 +37,10 @@
         function imgMove(){
       let cNum = current * -1 * 760;
 //     $(".container>ul").css("left",cNum)
-      $(".container>ul").stop().animate({left:cNum},700); }
-        
-          });
-       
+      $(".container>ul").stop().animate({left:cNum},1000); 
+        }
+      });
+//       외우다시피............하세여......위엘..
     </script>
     <style>
         #gallery{width: 824px;margin: 0 auto; background:#167 } 
@@ -54,8 +54,7 @@
         #thumbnail div.right {
           width: 32px;height: 95px;  display:flex; justify-content: center; align-items: center;
             background: #195; cursor:pointer;
-            
-        }
+           }
       
         #thumbnail .container{width: 760px; height: 95px; background:green; overflow: hidden;} 
         

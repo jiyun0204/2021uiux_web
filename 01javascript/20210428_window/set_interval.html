@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sttiv</title>
+</head>
+<body>
+  <div>
+<!--        <span id="div" style="background:#198;">자동 회전하는 텍스트</span>-->
+   <span id="div" style="background:#198;"><img src="../../images/img7.jpg" alt=""></span>
+    </div>
+    <button onclick="stop()">stop</button>
+    
+    
+    
+    <script>
+        let num =1;
+        const div = document.getElementById("div");
+        
+        let timeId = setInterval("doRotate()",300);
+        
+        function stop(){
+          clearInterval(timeId);
+        }
+        
+       function doRotate(){
+//      let div = document.getElementById("div");
+////        if 회전멈추고싶. 타임.-
+//    let timeId = setInterval("doRotate()",300); 
+//        
+//        function stop(){
+//        clearInterval(timeId);
+//        }
+////        자리를 위치를 바꿔줌..-두로테이트_
+//   function doRotate(){
+////       얘는한글자만...-
+//          let str = div.innerHTML;
+////       글자바뀌어지는것_자주쓰임.._ 서브스트링-
+//        let firstChar = str.substr(0,1);
+//        let remains = str.substr(1,str.length-1);
+////        뒤집어. '자'자만 뒤로,,,-
+//        str = remains + firstChar;
+//        div.innerHTML = str;
+//   }
+////     한글자만돌려주고싶다면. 밑참고-
+////    doRotate();-
+        
+        num++;
+//        div.innerHTML = num;
+        if(num>7){num=1}
+//        div.innerHTML = "<img src=\"../../images/img"+num+".jpg\">";
+           div.innerHTML = `<img src="../../images/img${num}.jpg">`;
+            } 
+    
+    </script>
+</body>
+</html>

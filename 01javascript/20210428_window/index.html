@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>wdw</title>
+    <style>
+        .btn{
+            background:pink; width: 300px;text-align: center; line-height: 40px; margin-bottom:10px;
+            cursor:pointer; border-radius:10px;}
+    </style>
+</head>
+
+<body>
+    <!--   온클릭은... 버튼의 attr이다- 자바만올수있ㅇ...-->
+    <button onclick="window.open('http://naver.com','naver','width=500px','height=500')">네이버</button>
+    <!--    함수..-->
+    <div onclick="winOpen()" class="btn">다음찰 열기</div>
+    <div onclick="closeWin()" class="btn">닫기</div>
+    <div class="btn" onclick="uwinOpen()">영상보기</div>
+    
+    
+    <script>
+        let myWin;
+        function winOpen() {
+            myWin.open("http://www.daum.net", "daum", "width=500", "height=500")
+        }
+        function closeWin(){
+            myWin.close();   
+        }
+        
+        function uwinOpen(){
+           myWin.close();
+        }
+           
+           function uwinOpen(){  window.open("youtube.html","youtube","width=500","height=400px")
+        }
+//        윈오픈 거의사용안,,,
+    </script>
+</body>
+</html>

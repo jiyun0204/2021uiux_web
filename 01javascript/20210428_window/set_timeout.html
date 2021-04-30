@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>stttime</title>
+</head>
+<body>
+<!--  <button onclick="clearT()">stop</button>-->
+<!-- 얘_클래스btn를선택이벤트실행 -->
+  <button class="btn">stop</button>
+   <script>
+       function myAlert(time){
+           alert(time + "초 지났습니다.");
+       }   
+//       변수- 타임아웃
+   let timeId = setTimeout("myAlert(3)",3000);
+       
+       
+    function clearT(){   
+       clearTimeout(timeId);
+       }
+       
+//       document.getElementsByClassName("btn")[0].onclick = clearT;
+//       함수이름. ...
+//       document.getElementsByClassName("btn")[0].onclick = function(){ 
+//           clearTimeout(timeId);
+//        }
+    </script> 
+</body>
+</html>
