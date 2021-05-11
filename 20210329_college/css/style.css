@@ -1,29 +1,30 @@
 @charset "utf-8";
- 
+
 /*contents*/
-#contents {
-    height: 1300px;
-    background-image:url(../images/bg_dot.gif),url(../images/main_bg.jpg);
-    background-repeat:repeat,no-repeat;
+#contents{
+   height:1300px;
+    background-image: url(../images/bg_dot.gif),url(../images/main_bg.jpg);
+    background-repeat: repeat,no-repeat;
     background-position:center;
     background-size:auto,cover;
     padding:100px 0;
-    
-     }
-#contents .titleWrap{width: 1200px;height: 260px;background:violet;margin: 0 auto; margin-bottom: 50px;}
-
-#contents .container {width: 1200px; margin: 0 auto; background:#fff;}
-
-#contents .container>ul>li{float:left; width: 24%;height: 225px;}
-/*짝수만 */
-#contents .container>ul>li:nth-child(2n){background: pink;}
+}
+#contents .titleWrap{
+    width: 1200px;height: 260px;background: violet;margin: 0 auto;
+    margin-bottom: 50px;
+}
+#contents .container{
+    width: 1200px;margin: 0 auto;background: #fff;
+}
+#contents .container>ul>li{float: left;width: 25%;height: 225px;}
+#contents .container>ul>li:nth-child(2n){background:pink;}
 #contents .container>ul>li:nth-child(1){width: 75%;height: 450px;background:gray;}
 #contents .container>ul>li:nth-child(2){height: 450px;}
 #contents .container>ul>li:nth-child(3){}
 #contents .container>ul>li:nth-child(4){}
 #contents .container>ul>li:nth-child(5){}
-#contents .container>ul>li:nth-child(6){background: skyblue;}
+#contents .container>ul>li:nth-child(6){background:#25bca5;}
 #contents .container>ul>li:nth-child(7){}
 #contents .container>ul>li:nth-child(8){width: 75%;}
 
-검사->이미지 슬라이드영역 , 
+/*검사->이미지 슬라이드영역 , */

@@ -1,0 +1,8 @@
+1. next 제작 - console.log() 0-1/1-2 / 변수 
+   current / banner / i 
+
+2. 이미지 에니메이션 작성
+3. prev제작
+
+4. 이중클릭 방지 overBtn = false 구현
+5. setInterval() / trigger()작성
