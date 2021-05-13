@@ -48,6 +48,9 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     <a href="<?php echo get_pretty_url($bo_table); ?>" class="lt_more"><span class="sound_only"><?php echo $bo_subject ?></span>더보기</a>
 
 </div>
+
+
+
 <div class="section clearfix">
   <div class="section_title">
 <h3><a href="<?php echo get_pretty_url($bo_table); ?>"><?php echo $bo_subject ?></a></h3>
@@ -55,30 +58,14 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
   </div>
     <div class="section_contents">
       <ul class="news_list clearfix">
+<?php for ($i=0; $i<$list_count; $i++) {  ?>
         <li>
-          <a href="#">
-            <h4 class="news_title">Lorem ipsum dolor sit amet.</h4>
-            <p class="date">2021-05-13</p>
+          <a href="<? echo get_pretty_url($bo_table, $list[$i]['wr_id']); ?>">
+            <h4 class="news_title"><? echo $list[$i]['subject']; ?></h4>
+            <p class="date"><?php echo $list[$i]['datetime2'] ?></p>
           </a>
         </li>
-        <li>
-          <a href="#">
-            <h4 class="news_title">Lorem ipsum dolor sit amet.</h4>
-            <p class="date">2021-05-13</p>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <h4 class="news_title">Lorem ipsum dolor sit amet.</h4>
-            <p class="date">2021-05-13</p>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <h4 class="news_title">Lorem ipsum dolor sit amet.</h4>
-            <p class="date">2021-05-13</p>
-          </a>
-        </li>
+        <? }  ?>
       </ul>
     </div>
 </div>
