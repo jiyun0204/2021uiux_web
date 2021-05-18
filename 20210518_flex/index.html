@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex</title>
+    <style>
+        html,body{height: 100%}
+        .container{
+            display: flex; 
+            background:#5f4b8b;
+/*            flex-direction:column;*/
+            height:100%;
+          
+              } 
+      .container div{flex-basis:calc( 100% / 3)}
+      .container div:nth-child(1){background:#482; } 
+      .container div:nth-child(2){background:#b0e2e0;} 
+      .container div:nth-child(3){background:#95d99d; }
+/*      .container div:nth-child(4){background:#858836; }*/
+        
+        
+        @media screen and (max-width:700px){
+            .container{flex-direction:column}  
+        }    
+    </style>
+</head>
+<body>
+   
+    <div class="container">
+        <div class="item">1Lorem ipsumblahblahblahblahblahblah</div>
+        <div class="item">2Lorem</div>
+        <div class="item">3Lorem ipsum</div>
+<!--        <div class="item">4Lorem ipsum.</div>-->
+    </div>
+</body>
+</html>
