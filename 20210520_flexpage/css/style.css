@@ -1,0 +1,74 @@
+@charset "UTF-8";
+/*reset*/
+*{margin: 0; padding: 0; box-sizing: border-box;}
+a:link,a:visited{color:#243c0b; text-decoration:none;}
+/*inherit 컬러값 부모값이 가지고있는색을 그대로 받아서.. 기본값 컬러값을 가져다쓰는거예여*/
+li{list-style:none;}
+.clearfix:after{content:""; display: block; clear:both;}
+
+
+/*header*/
+header{display: flex; justify-content: center; height:100px;}
+.container{width: 1000px; .background:#c4c1cb; display: flex; justify-content:space-between;}
+
+.logo{.background:#184; display: flex; align-items: center;}
+.menu{display:flex; align-items:center; }
+.menu ul{display: flex; .background:orange;}
+.menu ul a{display: block; padding:15px;}
+.menu ul a:hover{background:#8ec5d0; color:aliceblue;}
+.mobile_menu {display: none; .background:#549; width:30px; height:30px; cursor:pointer;}
+
+
+
+
+/*banner*/
+#banner {height: 600px; background-image:url(../images/banner/tony-stark-poster.jpg); background-position:center; background-size:cover; display: flex; justify-content: center;}
+/*항상기억해주세요*/
+
+
+.banner_text{.background:#167; display:flex; flex-direction: column; flex:1; justify-content:center; align-items: flex-end; color: beige;}
+.banner_text h2{font-size:2.5rem; text-align:left; width: 400px;}
+.banner_text p{font-size:1rem; text-align:left; width: 400px;}
+
+
+
+
+.column{flex-direction: column;}
+.banner_option {float:left; display: flex; }
+.banner_option>div {flex:1; background:red; color:#b4ff56; padding:15px;}
+
+.banner_title{font-weight:bold; font-size:1.3rem; margin-bottom:10px;}
+.banner_option a{color:aliceblue; font-size:1.1rem;}
+.banner_option a:hover{border-bottom:1px solid #fff;}
+
+
+/*general */
+#general{display: flex; justify-content: center;}
+#general section{flex:2; background:#597;}
+#general aside{flex:1; background:#198;}
+
+
+@media screen and (max-width:700px){
+    header{height: 60px;}
+    .logo{padding-left: 16px;}
+    .logo img{width: 100px;}
+    .menu{padding-right: 16px;}
+    .menu ul{display:none;}
+    .mobile_menu{display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+    }
+    .mobile_menu_line{height:4px; background-color:black; border-radius:2px}
+    .banner_text {align-items:center;} 
+    .banner_option{flex-direction:column;}
+    .banner_option a{display:none;}
+    .banner_option>div{padding:20px; padding-bottom: 0;}
+    .banner_option>div:last-child{padding-bottom:20px;}
+    
+    #container {flex-direction:column;} 
+    
+    
+    
+    
+}
+
