@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+        :root{
+            --blue:#19f;
+            --white:#fff;
+            --color1st:#197;
+        }
+        
+        .skyblue{background:skyblue;}
+        .wrap{background:var(--color1st)}
+        .oran{background:orange;}
+        .coral{background:coral; }
+        .blue{background:blue;}
+      </style>
+  </head>
+  <body>
+    <div class="wrap py-5 mb-5">
+    <div class="container skyblue">
+        <div class="row">
+           <div class="col-sm-6 col-md-3 col-lg-4 col-xl-3 oran">Lorem ipsum dolor.</div>
+           <div class="col-sm-6 col-md-3 col-lg-4 col-xl-3 coral">Lorem ipsum dolor.</div>
+           <div class="col-sm-6 col-md-3 col-lg-4 col-xl-3 blue">Lorem ipsum dolor.</div>
+           <div class="col-sm-6 col-md-3 d-lg-none col-xl-3 d-xl-block oran">Lorem ipsum dolor.</div>
+        </div>
+<!--        셀추가하고싶으면.. row만들어줘여...-->
+<!--   col콜롬 - 행 단의 -->
+   <div class="row">
+       <div class="col">test</div>
+       <div class="col">test</div>
+       <div class="col">test</div>
+       <div class="col">test</div>
+       <div class="col">test</div>
+       <div class="col">test</div>
+<!--      명령어를넣어논거ㅇㅇ col값만있어도......예시참고-->
+   </div>
+    </div>
+    
+    <div class="container">
+    <div class="row">
+       <div class="col"></div> 
+    </div>
+    </div>
+     
+      </div>
+<!--      <button class="btn btn-primary">basic</button>-->
+      
+       <div class="container px-0 bg-light mb-5">
+           <div class="row">
+               <div class="col">
+<!--                  p태그 div태그 등등 써도갠춘-->
+                   <button class="btn btn-primary">bttn</button>
+<!--                   div.btn.btn-secondary>{button}-->
+               <div class="btn btn-secondary">bttn</div>
+<!--               a.btn.btn-success>{bttn} 초록-->
+<!--              링크값주고싶으면...a태그..-->
+               <a href="#!" class="btn btn-success">bttn</a>
+<!--               div.btn.btn-warning 노랭이-->
+               <div class="btn btn-outline-warning">bttn</div>
+               </div>
+           </div>
+       </div>     
+    
+    <div class="container mb-5">
+        <div class="row">
+           <div class="btn-group">
+            <button class="btn btn-primary">apple</button>
+           
+            <div class="btn-group">
+            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">samsubg</button>
+             <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">tablet</a>
+                <a class="dropdown-item" href="#">smartphone</a>
+            </div>
+            
+               </div>
+            
+            <button class="btn btn-primary">sony</button>
+            <button class="btn btn-primary">lg</button>
+            <button class="btn btn-primary">sk</button>
+            </div>
+        </div>
+    </div>
+
+   <div class="container bg-dark">
+          <nav class="navbar navbar-expand-md bg-primary navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">LOGO</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggleMenu">
+<!--  coll~ 버튼 - 메뉴나오게-->
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="toggleMenu">
+    <ul class="navbar-nav ml-0 ml-lg-auto">
+<!--     m-l-->
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+   </div>
+    
+    
+    <div style="height: 1000px;"></div>
+    
+<!--    dropdown-toggle / data-toggle="dropdown"    -->
+    
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
