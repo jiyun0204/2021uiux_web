@@ -1,261 +1,339 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
-    <title>HANGUCK UV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:::HanGuk UV:::</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/jquery.bxslider.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/hanguk.css">
-
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/colorbox.css">
     <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.colorbox-min.js"></script>
     <script src="js/jquery.bxslider.js"></script>
-<script>
-  $(document).ready(function(){
-			// var myslider =$('.slider').bxSlider({
-			// 	auto:true,controls:false,pagerCustom:'.bx-pager'
-			// });
-			// $('.next_btn').click(function(){
-			// 	myslider.goToPrevSlide();
-			// 	return false;
-			// 	});
-			// $('.prev_btn').click(function(){
-			// 	myslider.goToNextSlide();
-			// 	return false; 
-			// });
-			var myslider2 =$('.slider01').bxSlider({
-				controls:false,auto:true,autoDelay:500
-			});
-			var myslider3 =$('.slider02').bxSlider({
-				mode:'vertical',
-				controls:false,touchEnabled:false,pager:false,auto:true,autoDelay:10
-			});
-			$('.sub1_btn').click(function(){
-				myslider3.goToPrevSlide();
-				return false;
-				});
-			$('.sub2_btn').click(function(){
-				myslider3.goToNextSlide();
-				return false; 
-			});
-		});
-		$(document).ready(function(){
-			var myslider =$('.slider').bxSlider({
-				auto:true,controls:false
-			});
-			$('.next_btn').click(function(){
-				myslider.goToPrevSlide();
-				return false;
-				});
-			$('.prev_btn').click(function(){
-				myslider.goToNextSlide();
-				return false; 
-			});
-		});
-	</script>
+    <script>
+        $(document).ready(function(){
+            var conslider1 = $(".slider").bxSlider({
+                controls:false,
+                // auto: true,
+                // pager: false,
+                pagerCustom:".sliderTap"
+
+            });
+
+            $(".nextBtn").click(function(){
+                conslider1.goToNextSlide();
+            });
+            $(".prevBtn").click(function(){
+                conslider1.goToPrevSlide();
+            });
+        });
+
+        $(document).ready(function(){
+            var conslider2 = $(".r_slider").bxSlider({
+                controls:false,
+                // auto: true,
+                // pager: false,
+                pagerCustom:".r_sliderTap"
+            });
+     
+        });
+
+        $(document).ready(function(){
+            $(".y_video").colorbox({
+                iframe:true,
+                innerWidth:700,
+				innerHeight:393.75
+            });
+        });
+    </script>
 
 </head>
-   <body>
-    <header class="header">
-        <div class="container">
-            <div class="topWrap clearfix">
-                <div class="tapMenubtn">
-                    <ul class="clearfix">
-                        <li class="active"><a href="#">대학교</a></li>
-                        <li><a href="#">입학안내</a></li>
-                        <li><a href="#">대학원</a></li>
-                    </ul>
-                </div>
-                <div class="gnMenubtn">
-                    <ul class="clearfix">
-                        <li><a href="#">글자크기</a></li>
-                        <li class="clearfix">
-                            <div><a href="#">-</a></div>
-                            <div><a href="#">+</a></div>
-                        </li>
-                        <li><a href="#">찾아오시는길</a></li>
-                        <li><a href="#">ENGLISH</a></li>
-                        <li><a href="#">사이트맵</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="headerWrap clearfix">
-            <div class="logo">
-                <a href="#"><img src="images/hkuvlogo.png" alt="logo"></a>
-            </div>
-            <div class="mnMenubtnWrap">
-                <div class="mnMenubtn">
-                    <ul class="clearfix">
-                        <li><a href="#">대학소개</a></li>
-                        <li><a href="#">학과소개</a></li>
-                        <li><a href="#">학사안내</a></li>
-                        <li><a href="#">대학생활</a></li>
-                        <li><a href="#">학생지원센터</a></li>
-                    </ul>
-                </div>
-                <div class="mnTogglebtn clearfix">
-                    <a href="#" class="clearfix"><img src="images/menu_pp_icouon.png" alt="menupp"></a>
-                    <a href="#" class="clearfix"><img src="images/pmcon.png" alt=""></a>
-                </div>
+<body>
+    <header id="header">
+        <div class="util_menu_wrap"> <!--100% blue-->
+            <div class="util_menu clearfix"> <!--1200px mauto-->
+                <ul class="left">
+                    <li><a href="#" class="active">대학교</a></li>
+                    <li><a href="#">입학안내</a></li>
+                    <li><a href="#">대학원</a></li>
+                </ul>
+
+                <ul class="right">
+                    <li>글자크기</li>
+                    <li class="btn_mp clearfix">
+                        <a href="#">-</a>
+                        <a href="#">+</a>
+                    </li>  
+                    <li><a href="#">찾아오시는 길</a></li>              
+                    <li><a href="#">ENGLISH</a></li>              
+                    <li><a href="#">사이트맵</a></li>              
+                </ul>
+            </div>    
+        </div>       
+        
+        <div class="header_main_wrap">
+            <div class="header_main clearfix">
+                <ul class="logo"><img src="images/logo.jpg" alt=""></ul>
+
+                <ul class="main_menu">
+                    <li><a href="#">대학소개</a></li>
+                    <li><a href="#">학과소개</a></li>
+                    <li><a href="#">학사안내</a></li>
+                    <li><a href="#">대학생활</a></li>
+                    <li><a href="#">학생지원센터</a></li>
+                    <li><a href="#">
+                        <!-- <img src="images/headericon.jpg" alt=""> -->
+                        <div class="nav_icon"></div>
+                    </a></li>
+                </ul>
             </div>
         </div>
     </header>
-    <div class="content">
-        <div class="titleWrap clearfix">
-           <div class="titleTxt">
-               <h3>함께 나누며 세상을 이끌어</h3>
-               <h2>세계로향하는 한국대학교</h2>
-           </div>
-           <ul class="titleMenu">
-               <li><a href="#"><img src="images/pdicon.png" alt=""><p>입학절차안내</p></a></li>
-               <li><a href="#"><img src="images/icon0.png" alt=""><p>입학설명회</p></a></li>
-               <li><a href="#"><img src="images/janghack.png" alt=""><p>장학제도</p></a></li>
-               <li><a href="#"><img src="images/jms.png.png" alt=""><p>증명서발급</p></a></li>
-           </ul>
-        </div>
-        <div class="container">
-            <ul>
+
+    <main id="content_wrap">
+        <section id="title"><!--메인 타이틀, 아이콘-->
+            <div class="title_txt"> 
+               <p>함께 나누며 세상을 이끌어<br> <span>세계로향하는 한국대학교</span></p>
+            </div>
+            <ul class="title_icon clearfix">
                 <li>
-                    <div class="sliderWrap">
+                    <a href="#">
+                        <!-- <img src="./images/icon.png" alt=""> -->
+                        <div class="icon1"></div>
+                        <h3>입학절차안내</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon2"></div>
+                        <h3>입학설명회</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon3"></div>
+                        <h3>장학제도</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon4"></div>
+                        <h3>증명서발급</h3>
+                    </a>
+                </li>
+            </ul>    
+        </section> 
+        <div class="container"> <!--컨텐츠-->
+            <ul class="clearfix">
+                <li>
+                    <div class="slider_wrap">
                         <ul class="slider">
-                            <li><img src="images/main_slider.jpg" alt="">
-                                <div class="imgtxt">
-                                  <h3><b>한국</b>에서 <b>시작</b>하는 새로운 <b>꿈</b></h3>
-                                  <a href="#" class="btn">자세히 보기<i class="fas fa-caret-right"></i></a>
+                            <li>
+                                <img src="images/slider_bg01.jpg" alt="">
+                                <div class="slider_txt">
+                                    <p><span>한국</span>에서<br> <span>시작</span>하는 <br>새로운 <span>꿈1</span></p>
+                                    <a href="#">자세히 보기 ▶</a>
                                 </div>
                             </li>
-                            <li><img src="./images/Lbt.png" alt="">
-                                <div class="imgtxt">
-                                  <h3><b>한국</b>에서 <b>시작</b>하는 새로운 <b>꿈</b></h3>
-                                  <a href="#" class="btn">자세히 보기<i class="fas fa-caret-right"></i></a>
+                             <li>
+                                <img src="images/slider_bg01.jpg" alt="">
+                                <div class="slider_txt">
+                                    <p><span>한국</span>에서<br> <span>시작</span>하는 <br>새로운 <span>꿈2</span></p>
+                                    <a href="#">자세히 보기 ▶</a>
                                 </div>
                             </li>
-                            <li><img src="./images/Rbt.png" alt="">
-                                <div class="imgtxt">
-                                  <h3><b>한국</b>에서 <b>시작</b>하는 새로운 <b>꿈</b></h3>
-                                  <a href="#" class="btn">자세히 보기<i class="fas fa-caret-right"></i></a>
+                            <li>
+                                <img src="images/slider_bg01.jpg" alt="">
+                                <div class="slider_txt">
+                                    <p><span>한국</span>에서<br> <span>시작</span>하는 <br>새로운 <span>꿈3</span></p>
+                                    <a href="#">자세히 보기 ▶</a>
                                 </div>
                             </li>
-                            <li><img src="images/main_slider.jpg" alt="">
-                                <div class="imgtxt">
-                                  <h3><b>한국</b>에서 <b>시작</b>하는 새로운 <b>꿈</b></h3>
-                                  <a href="#" class="btn">자세히 보기<i class="fas fa-caret-right"></i></a>
+                            <li>
+                                <img src="images/slider_bg01.jpg" alt="">
+                                <div class="slider_txt">
+                                    <p><span>한국</span>에서<br> <span>시작</span>하는 <br>새로운 <span>꿈4</span></p>
+                                    <a href="#">자세히 보기 ▶</a>
+                                </div>
+                            </li>
+                        </ul>  
+                        <div class="nextBtn"></div>
+                        <div class="prevBtn"></div>
+                        <div class="sliderTap">
+                            <a href="#" data-slide-index="0"></a>
+                            <a href="#" data-slide-index="1"></a>
+                            <a href="#" data-slide-index="2"></a>
+                            <a href="#" data-slide-index="3"></a>
+                        </div>
+                    </div>              
+                </li>
+                
+                <li>
+                    <div class="app_wrap">
+                        <img src="images/slider_bg02.jpg" alt="">
+                        <div class="app_txt_wrap">
+                        <p class="app_title"><span>APP</span>으로 <br><span>스마트 도서관</span><br> 바로이용하자!</p>
+                        <p class="app_txt">모바일 열람증은 <br>도서관 자료실/도서대출 등에 <br>사용 할 수 있습니다.</p>
+                        <a href="#">자세히 보기 ▶</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="hotlink_wrap">
+                        <h2>HOT LINK</h2>
+                        <ul class="hotlink_icon_wrap">
+                            <li>
+                                <a href="#">
+                                    <div class="hotlink_icon1"></div>
+                                    <h3>국제교류<br>센터</h3>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="hotlink_icon2"></div>
+                                    <h3>원격지원<br>시스템</h3>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="hotlink_icon3"></div>
+                                    <h3>예산/결산<br>공고</h3>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="notice_wrap">
+                        <h2>공지사항</h2>
+                        <ul class="notice_data">
+                            <li><a href="#">
+                                [공지]한국대학교 웹진블라블라
+                                <span class="date">2016-06-12</span>
+                            </a></li>
+                            <li><a href="#">
+                                [보도]우수대학교 선정 수상
+                                <span class="date">2016-06-17</span></a></li>
+                            <li><a href="#">
+                                [공지]대학입시 설명회
+                                <span class="date">2016-06-05</span></a></li>
+                            <li><a href="#">
+                                [공지]2016년 1학기 성적블라블라
+                                <span class="date">2016-05-14</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="snsnews_wrpa">
+                        <h2>SNS NEWS</h2>
+                        <div class="snsnews clearfix">
+                            <a href="#" class="news">
+                                <img src="./images/학교01.jpg" alt="">
+                                <p>한국대학교는<br>2017학년도 신입생 입학식을 3월 4일(목) 본교 종합체육관에서 블라블라기사</p>
+                            </a>
+                            <ul class="snsicon">
+                                <li><a href="#">
+                                    <div class="snsicon_f"></div>
+                                </a></li>
+                                <li><a href="#">
+                                    <div class="snsicon_t"></div>
+
+                                </a></li>
+                                <li><a href="#">
+                                    <div class="snsicon_g"></div>
+                                </a></li>
+                                <li><a href="#">
+                                    <div class="snsicon_y"></div>
+                                </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="campus_tour">
+                        <h3>캠퍼스 투어</h3>
+                    </div>
+                </li>
+                <li>
+                    <div class="video">
+                        <a href="https://www.youtube.com/embed/PzUZ1zP940U" class="y_video"><div class="video_playbtn">
+                            <p>▶</p>
+                        </div></a>
+                    </div>
+                </li>
+                <li>
+                    <div class="recruitment_slider_wrap">
+                        <ul class="r_slider">
+                            <li>
+                                <div class="r_bgimg1"></div>
+                                <div class="r_slider_txt">
+                                    <p>2017년 신·편입생2차 모집1<br>
+                                        <span>2017.7.1~7.10</span>
+                                    </p>
+                                    <a href="#">입학사전예약 ▶</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="r_bgimg1"></div>
+                                <div class="r_slider_txt">
+                                    <p>2017년 신·편입생2차 모집2<br>
+                                        <span>2017.7.1~7.10</span>
+                                    </p>
+                                    <a href="#">입학사전예약 ▶</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="r_bgimg1"></div>
+                                <div class="r_slider_txt">
+                                    <p>2017년 신·편입생2차 모집3<br>
+                                        <span>2017.7.1~7.10</span>
+                                    </p>
+                                    <a href="#">입학사전예약 ▶</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="r_bgimg1"></div>
+                                <div class="r_slider_txt">
+                                    <p>2017년 신·편입생2차 모집4<br>
+                                        <span>2017.7.1~7.10</span>
+                                    </p>
+                                    <a href="#">입학사전예약 ▶</a>
                                 </div>
                             </li>
                         </ul>
-                        <div class="nextBtn">
-                            <img src="images/nextbtn.png" alt="">
-                        </div>
-                        <div class="prevBtn">
-                            <img src="images/prevbtn.png" alt="">
+                        <div class="r_sliderTap">
+                            <a href="#" data-slide-index="0"></a>
+                            <a href="#" data-slide-index="1"></a>
+                            <a href="#" data-slide-index="2"></a>
+                            <a href="#" data-slide-index="3"></a>
                         </div>
                     </div>
-                </li> <!--75%-->
-                <li>
-                  <div class="content02Wrap">
-                    <h4><b>APP</b>으로<br> <b>스마트도서관</b> 바로이용하자!</h4>
-                    <p>모바일 열람증<br>도서관 자료실/도서대출 등에<br>사용할 수 있습니다.</p>
-                    <a href="#" class="btn">자세히 보기<i class="fas fa-caret-right"></i></a>
-                  </div>
-                </li> <!--25%-->
-                <li>
-                  <div class="content03Wrap">
-                    <h5>HOT LINK</h5>
-                    <ul>
-                      <li><a href="#"><img src="images/cont_icon_01.png" alt=""><p>국제교류 센터</p></a></li>
-                      <li><a href="#"><img src="images/cont_icon_02.png" alt=""><p>원격지원 시스템</p></a></li>
-                      <li><a href="#"><img src="images/cont_icon_03.png" alt=""><p>예산/결산 공고</p> </a></li>
-                    </ul>
-                  </div>
-                </li> <!--25%-->
-                <li>
-                  <div class="content04Wrap">
-                    <h5>공지사항</h5>
-                    <ul class="clearfix">
-                      <li><a href="#">[공지] 한국대학교 웹진...<span>2016-06-12</span></a></li>
-                      <li><a href="#">[보도] 우수대학교 선정 수상<span>2016-06-17</span></a></li>
-                      <li><a href="#">[공지] 대학입시 설명회<span>2016-06-05</span></a></li>
-                      <li><a href="#">[공지] 2016학년도 1학기 성적...<span>2016-05-14</span></a></li>
-                    </ul>
-                  </div>
-                </li> <!--25%-->
-                <li class="clearfix">
-                  <div class="content05Wrap">
-                    <h5>SNS NEWS</h5>
-                    <div class="content05News clearfix">
-                      <img src="images/content05.jpg" alt="">
-                      <p>한국 대학교는<br>2017학년도 신입생<br>입학식을 3월 2일(목)<br>본교 종합체육관</p>
-                    </div>
-                    <ul class="snsIcon">
-                      <li><a href="#"><img src="images/sns_icon01.png" alt=""></a></li>
-                      <li><a href="#"><img src="images/sns_icon02.png" alt=""></a></li>
-                      <li><a href="#"><img src="images/sns_icon03.png" alt=""></a></li>
-                      <li><a href="#"><img src="images/sns_icon04.png" alt=""></a></li>
-                    </ul>
-                  </div>
-                </li> <!--25%-->
-                <li>
-                  <div class="overlay">캠퍼스 투어</div>
-                </li> <!--25%-->
-                <li>
-                  <a href="https://www.youtube.com/embed/Hln2_Az_e3k" class="youtube" title="대학교 홍보영상">
-                    <i class="far fa-play-circle"></i></a>
-                </li> <!--25%-->
-                <li>
-                  <div class="slider2Wrap">
-                    <ul class="slider2">
-                      <li><img src="images/content04.jpg" alt="">
-                        <div class="img2txt">
-                          <p>2017년 신&#183;편입생2차 모집</p>
-                          <h3>2017.7. 1 ~ 7.10</h3>
-                          <a href="#" class="btn">입학사전예약<i class="fas fa-caret-right"></i></a>
-                        </div>
-                      </li>
-                      <li><img src="images/content04.jpg" alt="">
-                        <div class="img2txt">
-                          <p>2017년 신&#183;편입생2차 모집</p>
-                          <h3>2017.7. 1 ~ 7.10</h3>
-                          <a href="#" class="btn">입학사전예약<i class="fas fa-caret-right"></i></a>
-                        </div>
-                      </li>
-                      <li><img src="images/content04.jpg" alt="">
-                        <div class="img2txt">
-                          <p>2017년 신&#183;편입생2차 모집</p>
-                          <h3>2017.7. 1 ~ 7.10</h3>
-                          <a href="#" class="btn">입학사전예약<i class="fas fa-caret-right"></i></a>
-                        </div>
-                      </li>
-                      <li><img src="images/content04.jpg" alt="">
-                        <div class="img2txt">
-                          <p>2017년 신&#183;편입생2차 모집</p>
-                          <h3>2017.7. 1 ~ 7.10</h3>
-                          <a href="#" class="btn">입학사전예약<i class="fas fa-caret-right"></i></a>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </li> <!--75%-->
+                </li>
             </ul>
+
+            <div class="schedule_wrap"></div>
         </div>
-    </div>
+
+    </main>
     <footer id="footer">
-      <div class="footerWrap">
-        <div class="footerlogo"></div>
-        <div class="copywrite clearfix">
-          <ul class="clearfix">
-            <li><a href="#">회사소개</a></li>
-            <li><a href="#">한국대학교</a></li>
-            <li><a href="#">개인정보취급방침</a></li>
-            <li><a href="#">이용정책</a></li>
-            <li><a href="#">입점/제휴문의 및 광고</a></li>
-            <li><a href="#">이메일 무단수집거부</a></li>
-          </ul>
-          <p>대표자 : 홍길동 서울특별시구로구 구로로300(구로동 6가)  사업자등록번호 : 123-56-7890234<br>통신판매업 신고번호 : 제1234-서울 구로구-1004호  개인정보관리 책임자 : 홍길동   소비자피해보상보험<br>고객센터 : 1234-5678  FAX : 02-1234-5678  HANGUKUNIVERSITY @HANGUK.COM</p>
-          <p>COPYRIGHT ⓒHANGUK.ALL RIGHTS RESERVED.</p>
+        <div class="footer_menu_wrap">
+            <ul class="footer_menu clearfix">
+                <li><a href="#">회사소개</a> </li>
+                <li><a href="#">한국대학교</a></li>
+                <li><a href="#">개인정보취급방침</a></li>
+                <li><a href="#">이용정책</a></li>
+                <li><a href="#">입점/제휴문의 및 광고</a></li>
+                <li><a href="#">이메일 무단수집거부</a></li>
+            </ul>
+            <p>대표자 : 홍길동 서울특별시 구로구 구로로300 (구로동 6가)     사업자등록번호 : 123-56-7890234<br>
+                통신판매업 신고번호 : 제 1234-서울 구로구-1004호  개인정보관리 책임자 : 홍길동    소비자피해보상보험<br>
+                고객센터 : 1234-5678  FAX : 02-1234-5678  HANGUKUNIVERSITY @HANGUK.CCOM</p>
+            <span>COPYRIGHT ⓒ HANGUK. ALL RIGHTS RESERVED.</span>
         </div>
-      </div>
+       
     </footer>
 </body>
 </html>
