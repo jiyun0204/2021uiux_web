@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="test">
+        <ul class="ttpu">
+            <li v-for="(명작,i) in product">
+                <a v-bind:href="link[i]">
+                    {{product[i]}}</a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        new Vue({
+            el:'#test',
+            data:{
+                product:['자전거','항아리','물병','메모지','샤프','지우개','볼펜'],
+                link:['#1','#2','#3','#4','#5','#6','#7']
+            }
+        })
+    </script>
+</body>
+</html>
