@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fullpage</title>
     <link rel="stylesheet" href="css/fullpage.css">
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="../css/reset.css">
 
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/jquery.fullPage.js"></script>
@@ -14,31 +14,58 @@
         $(document).ready(function(){
             $("#fullpage").fullpage({
                 menu:".topMenu",
-                anchors:['m1st','m2st','m3st','m4st'],
+                anchors:['m1st','m2st','m3st','m4st','m5st'],
                 navigation:true,
-                navigationTooltips: ['home','product','community','board',],
-                    showActiveTooltip:true
+                navigationTooltips: ['home', 'product', 'community', 'board'],
+		        showActiveTooltip: true,
+                responsiveWidth:1000,
+                afterLoad:function(anchorslink,index){
+                    console.log(anchorslink+ ', ' + index);
+                    if(index == 1){
+                        $(".txt1st").addClass("end");
+                        
+                    }else{
+                        $(".txt1st").removeClass("end");
+                    }
+                }
             })
         })
     </script>
     <style>
         .section{
-            background-position:center;       
+            background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            }
+        }
         .section.page1{background-image: url(images/bg1.jpg);}
         .section.page2{background-image: url(images/bg2.jpg);}
         .section.page3{background-image: url(images/bg3.jpg);}
         .section.page4{background-image: url(images/bg4.jpg);}
-        #navTop {
-            position: fixed; z-index:1; background:white;
-            width: 100%;}
-            
-        #navTop li {display:inline-block; padding: 10px;}
-        #navTop li.active{background: rgb(132, 235, 192);}
+        #navTop{
+            position: fixed;z-index:1;background: #fff;
+            width: 100%;
+        }
+        #navTop li{display: inline-block;padding: 10px;}
+        #navTop li.active{background: skyblue;}
         #fp-nav.right{right:10px;}
-         .fp-tooltip.right{right: 20px;}
+        .fp-tooltip.right{right:20px}
+        
+        .txt1st{opacity:0; transition:0.3s;transform:translateY(-300px)}
+        .txt1st.end{opacity:1; transform: 5px solid transparent;}
+        .scroll{
+            position: absolute; bottom:20px; left: 50%; transform:translateX(-50%);
+            animation-name:xScroll;
+            animation-duration:0.8s;
+            animation-iteration-count:infinite;
+            animation-direction:alternate;
+            
+            }
+        
+        @keyframes xScroll {
+            from{bottom:30px;}
+             to{bottom:50px;}
+            }
+        
     </style>
 </head>
 <body>
@@ -51,11 +78,36 @@
         </ul>
     </nav>
     <div id="fullpage">
-        <div class="section page1" data-anchor="m1st">1</div>
+     
+        <div class="section page1" data-anchor="m1st">
+         <div class="container bg-info">
+             <div class="txt1st">
+                 <h3>Lorem ipsum.</h3>
+                 <p>Lorem ipsum dolor sit amet.</p>
+                 <a href="#" class="btn btn-primary">more</a>
+             </div>
+         </div>
+            <div class="scroll">
+              <a href="#m2st"></a><img src="images/btn_scroll.png" alt="">     
+            </div>
+        1</div>
         <div class="section page2" data-anchor="m2st">2</div>
         <div class="section page3" data-anchor="m3st">3</div>
         <div class="section page4" data-anchor="m4st">4</div>
-
+        <div class="section page5 fp-auto-height py-3 bg-dark text-white" data-anchor="m5st">
+           
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, quis.
         </div>
+        
+    </div>
+    
+<!--    c+shf+p - vcode 단축키 - 감싸주는기능 or c+a+W  OR c+s+W-->
+    
+    
+    
+    
+    
+    
+    
 </body>
 </html>
