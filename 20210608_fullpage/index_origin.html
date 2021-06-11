@@ -38,16 +38,16 @@
             background-repeat: no-repeat;
             background-size: cover;
             }
-        .section.page1{background-image: url(images/bg1.jpg);}
-        .section.page2{background-image: url(images/bg2.jpg);}
-        .section.page3{background-image: url(images/bg3.jpg);}
-        .section.page4{background-image: url(images/bg4.jpg);}
+        .section.page1{background-image: url(images/navmh1.jpg);}
+        .section.page2{background-image: url(images/navmh2.jpg);}
+        .section.page3{background-image: url(images/navmh3.jpg);}
+        .section.page4{background-image: url(images/navmh4.jpg);}
         #navTop {
             position: fixed; z-index:1; background:white;
             width: 100%;}
             
         .navbar li {transition: 0.3s;border-bottom:5px solid transparent;}
-        .navbar li.active{border-bottom:5px solid #000;}
+        .navbar li.active{border-bottom:2px solid #fff;}
         #fp-nav.right{right:10px;}
          .fp-tooltip.right{right: 20px;}
         
@@ -58,12 +58,15 @@
         }
         
         .txt1st{opacity:0;transition:0.7s;transform:translateY(-300px)}
+        .txt1st h4 {color:greenyellow;}
+        .txt1st p {color:greenyellow;}
         .txt1st.end{opacity:1;transform:translateY(0)}
         .scroll {
             position: relative;
-            bottom: 30px;
+            bottom:50px;
             left: 50%;
-            transform: translateX(-50%);
+            top: 200px;
+            transform: translateX(-50%,-50%);
             animation-name:xScroll;
             animation-duration: 0.8s;
             animation-iteration-count: infinite;
@@ -71,30 +74,42 @@
             
         }
         
+        
+/*
+          position: relative;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation-name:xScroll;
+            animation-duration: 0.8s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        
+*/
         @media screen and (max-width:1000px){
             .navbar li.active{border-bottom:5px solid transparent;}
         }
     </style>
 </head>
 <body>
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top py-md-0">
-        <a class="navbar-brand" href="#">LOGO</a>
+ <nav class="navbar navbar-expand-lg navbar-dark  fixed-top py-md-0">
+        <a class="navbar-brand" href="#"><img src="images/mhlogo.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav topMenu ml-auto">
             <li class="nav-item"  data-menuanchor="m1st">
-              <a class="nav-link" href="#m1st">Home </a>
+              <a class="nav-link" href="#m1st">SERVICE</a>
             </li>
             <li class="nav-item" data-menuanchor="m2st">
-              <a class="nav-link" href="#m2st">product</a>
+              <a class="nav-link" href="#m2st">NEWS</a>
             </li>
             <li class="nav-item" data-menuanchor="m3st">
-              <a class="nav-link" href="#m3st">community</a>
+              <a class="nav-link" href="#m3st">ABOUT</a>
             </li>
             <li class="nav-item" data-menuanchor="m4st">
-                <a class="nav-link" href="#m4st">board</a>
+                <a class="nav-link" href="#m4st">BORAD</a>
               </li>
            
           </ul>
@@ -104,9 +119,9 @@
         <div class="section page1" data-anchor="m1st">
             <div class="container">
                 <div class="txt1st">
-                    <h3>Lorem, ipsum.</h3>
-                    <p>Lorem ipsum dolor sit.</p>
-                    <a href="#" class="btn btn-primary">more</a>
+                    <h4>대한민국의</h4>
+                    <p>젊은 창작자를 응원합니다</p>
+    <!--<a href="#" class="btn btn-primary">more</a>-->
                 </div>
             </div>
             <div class="scroll">
